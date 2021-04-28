@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "outDir": "out",
+    "sourceMap": true,
+    /* List of folders to include type definitions from. */
+    "types": [
+      "node",
+    ],
+  },
+}

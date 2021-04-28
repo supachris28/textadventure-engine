@@ -1,0 +1,69 @@
+rooms:
+
+- id: entrance
+  name: Castle Entrance
+  description: A bleak stone courtyard with a mud floor.
+  paths:
+  - direction: N
+    visibleFeatures: Main gate into the castle
+    roomId: hallway
+  - direction: E
+    visibleFeatures: Small door into the side of the castle
+    roomId: dungeon1
+  items:
+  - name: hay
+
+- id: hallway
+  name: Castle Hallway
+  description: A aged, large room that was once quite grand but now is mostly dusty.
+  items:
+  - name: Suit of armour
+    defenceModifier: 20
+  paths:
+  - direction: S
+    visibleFeatures: Main gate back out of the castle
+    roomId: entrance
+  - direction: N
+    visibleFeatures: Large double door further into the castle
+    roomId: dining
+    keys:
+      - Blue key
+
+- id: dining
+  name: Castle Dining Room
+  description: A grand dining room.
+  items:
+  - name: Sword
+    strengthModifier: 25
+  paths:
+  - direction: S
+    visibleFeatures: Double door
+    roomId: hallway
+
+- id: dungeon1
+  name: First-level Dungeon
+  description: A gloomy room with a nasty smell.
+  items:
+  - name: Blue key
+  paths:
+  - direction: W
+    visibleFeatures: Small door back out of the castle
+    roomId: entrance
+  - direction: E
+    visibleFeatures: Iron gate into a darker room
+    roomId: dungeon2
+
+- id: dungeon2
+  name: Second-level Dungeon
+  description: A really-gloomy room with a really-nasty smell.
+  paths:
+  - direction: W
+    visibleFeatures: Iron gate into a gloomy room
+    roomId: dungeon1
+  enemies:
+  - name: Gruesome troll
+    strength: 20
+    health: 45
+    respawnLikely: 0.6
+
+startRoomId: entrance

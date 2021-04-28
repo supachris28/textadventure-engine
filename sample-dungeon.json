@@ -1,0 +1,53 @@
+{
+  "rooms": [
+    {
+      "id": "entrance",
+      "name": "Castle Entrance",
+      "description": "A bleak stone courtyard with a mud floor",
+      "paths": [
+        {
+          "direction": "N",
+          "visibleFeatures": "Main gate into the castle",
+          "roomId": "hallway"
+        },
+        {
+          "direction": "E",
+          "visibleFeatures": "Small door into the side of the castle",
+          "roomId": "dungeon1"
+        }
+      ],
+      "items": [
+        "hay"
+      ]
+    },
+    {
+      "id": "hallway",
+      "name": "Castle Hallway",
+      "description": "A aged, large room that was once quite grand but now is mostly dusty",
+      "items": [
+        "Suit of armour"
+      ],
+      "paths": [
+        {
+          "direction": "S",
+          "visibleFeatures": "Main gate back out of the castle",
+          "roomId": "entrance"
+        }
+      ]
+    },
+    {
+      "id": "dungeon1",
+      "name": "First-level Dungeon",
+      "description": "A gloomy room with a nasty smell",
+      "items": [],
+      "paths": [
+        {
+          "direction": "W",
+          "visibleFeatures": "Small door back out of the castle",
+          "roomId": "entrance"
+        }
+      ]
+    }
+  ],
+  "startRoomId": "entrance"
+}
